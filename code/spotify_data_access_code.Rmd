@@ -1,0 +1,23 @@
+---
+title: "spotidy_data"
+author: "Chaitanya Shekar"
+date: "2023-11-10"
+---
+
+
+# Generate data using spotify api
+```{r}
+library(spotifyr) 
+get_spotify_access_token(client_id  = "################################",
+                         client_secret  = "################################")
+
+Sys.setenv(SPOTIFY_CLIENT_ID = "################################")
+Sys.setenv(SPOTIFY_CLIENT_SECRET = "################################")
+
+access_token <- get_spotify_access_token()
+
+Taylor_swift<- get_artist_audio_features("Taylor Swift")
+Taylor_swift<-data.frame(Taylor_swift)
+
+write_xlsx(Taylor_swift, "Taylor_swift.xlsx")
+```
