@@ -1,0 +1,4 @@
+Model,Accuracy,Test Error,F1 Score
+Logistic Regression,0.6607,0.339,0.6711
+Decision Trees,0.6623,0.3377,0.6707
+Random Forest Classifier,0.6645,0.3354,0.673
