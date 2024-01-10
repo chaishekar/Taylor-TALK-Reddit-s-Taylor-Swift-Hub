@@ -1,0 +1,60 @@
+---
+format: html
+output:
+  quarto::quarto_html:
+    self_contained: True
+    css: styles.scss  
+---
+
+## <span style="color: #9678b6;">Feedback discussion</span>
+
+Here's a breakdown of the feedback received in various categories and how it has been incorporated into the project:
+
+<b style="color: #9678b6;">Project Plans</b>
+
+<span style="color: #9686a7;">Professor Feedback:</span> Suggested expanding on the project goals' descriptions.<br>
+<span style="color: #9686a7;">Incorporation:</span> We elaborated on the project goals to provide more comprehensive descriptions in the final deliverable.
+
+<b style="color: #9678b6;">EDA Work</b>
+
+<span style="color: #9686a7;">Peer Feedback:</span> Suggested focusing on useful features or dimensions that can bring value to the following ML and NLP parts.<br>
+<span style="color: #9686a7;">Incorporation:</span> We expanded our EDA analysis by considering different dimensions and data segmentation to enrich the ML and NLP components.
+
+<b style="color: #9678b6;">NLP Work</b>
+
+<span style="color: #9686a7;"> Peer Feedback:</span> Proposed user stratification analysis to divide users into cohorts based on their preferences.<br>
+<span style="color: #9686a7;">Incorporation:</span> We considered the suggestion of implementing LDA and other techniques on different groups of fans such as fan's anti-fans and neutral in the NLP analysis.
+
+<span style="color: #9686a7;">Professor Feedback:</span> Concerns were raised about displaying all data points in the scatterplot. It was suggested to show percentiles and a histogram instead.<br>
+<span style="color: #9686a7;">Incorporation:</span> We changed the scatterplot to a barplot to address this concern.
+
+<span style="color: #9686a7;">Professor Feedback:</span> It was noted that the colors used for the Reddit community fans were not distinct enough.<br>
+<span style="color: #9686a7;"> Incorporation:</span> We altered the color scheme to enhance distinction between the categories.
+
+<span style="color: #9686a7;"> Professor Feedback:</span> A request was made to explore why there is a significant amount of sadness associated with the Swift tour.<br>
+<span style="color: #9686a7;"> Incorporation:</span> We addressed this point in the inference section of the plot and considered possible reasons for the emotions.
+
+<span style="color: #9686a7;"> Professor Feedback:</span> It was suggested to round labels, particularly in the sunburst plot and other relevant areas.<br>
+<span style="color: #9686a7;"> Incorporation:</span> We rounded labels wherever necessary in the project.
+
+
+<span style="color: #9686a7;"> Professor Feedback:</span> A question was raised about a comment being classified as sexism and a possible explanation was provided.<br>
+<span style="color: #9686a7;"> Incorporation:</span> We mentioned this as one of the limitations of the classifier, acknowledging its inaccuracies.
+
+<b style="color: #9678b6;">ML Work</b>
+
+<span style="color: #9686a7;"> Professor Feedback:</span> Concerns were raised about the ROC curve and the importance of having an even line.<br>
+<span style="color: #9686a7;"> Incorporation:</span> We made adjustments to the ROC curve to ensure a more even representation.
+
+<span style="color: #9686a7;"> Professor Feedback:</span> It was suggested to round values in tables as the 12th digit isn't helpful.<br>
+<span style="color: #9686a7;"> Incorporation:</span> We rounded table values to 4 digits for clarity.
+
+<span style="color: #9686a7;"> Professor Feedback:</span> The recommendation was made to include numerical values in the confusion matrices for better interpretation.<br>
+<span style="color: #9686a7;"> Incorporation:</span> We implied the inclusion of numerical values in the confusion matrices for clarity.
+
+<b style="color: #9678b6;">Website/Results</b>
+
+<span style="color: #9686a7;"> Professor Feedback:</span> Appreciated the website.<br>
+<span style="color: #9686a7;"> Peer Feedback:</span> suggested using a lighter format instead of a dark one.<br>
+<span style="color: #9686a7;"> Incorporation:</span> We adjusted the website backdrop as suggested by the peer group. 
+
