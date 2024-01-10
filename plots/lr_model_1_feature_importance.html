@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    #vis.vega-embed {
+      width: 100%;
+      display: flex;
+    }
+
+    #vis.vega-embed details,
+    #vis.vega-embed details summary {
+      position: relative;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@5.16.3"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "data": {"name": "data-8a0e29ba4f038065dfd00bfb97792d97"}, "mark": {"type": "bar", "color": "#dac4e9"}, "encoding": {"x": {"field": "score", "title": "Importance Score", "type": "quantitative"}, "y": {"field": "name", "sort": ["emotion_class_vec_fear", "emotion_class_vec_sadness", "emotion_class_vec_surprise", "sentiment_class_vec_negative", "gilded", "sentiment_class_vec_positive"], "title": "Feature Name", "type": "nominal"}}, "height": 300, "title": "Feature Importance in Logistic Regression", "width": 400, "$schema": "https://vega.github.io/schema/vega-lite/v5.16.3.json", "datasets": {"data-8a0e29ba4f038065dfd00bfb97792d97": [{"name": "emotion_class_vec_fear", "score": 0.6413582597931133}, {"name": "emotion_class_vec_sadness", "score": 0.4790012548331486}, {"name": "emotion_class_vec_surprise", "score": 0.305375352484674}, {"name": "sentiment_class_vec_negative", "score": 0.010181571266367092}, {"name": "gilded", "score": 0.0}, {"name": "sentiment_class_vec_positive", "score": -0.11332834494935494}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>

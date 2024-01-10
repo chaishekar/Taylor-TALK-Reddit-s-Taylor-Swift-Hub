@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    #vis.vega-embed {
+      width: 100%;
+      display: flex;
+    }
+
+    #vis.vega-embed details,
+    #vis.vega-embed details summary {
+      position: relative;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@5.16.3"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "data": {"name": "data-ca19585764b62007b0a833a571a39be5"}, "mark": {"type": "bar", "color": "#dac4e9"}, "encoding": {"x": {"field": "score", "title": "Importance Score", "type": "quantitative"}, "y": {"field": "name", "sort": ["contro_index", "emotion_class_vec_fear", "sentiment_class_vec_negative", "emotion_class_vec_sadness", "sentiment_class_vec_positive", "emotion_class_vec_surprise", "gilded"], "title": "Feature Name", "type": "nominal"}}, "height": 300, "title": "Feature Importance in Random Forest", "width": 400, "$schema": "https://vega.github.io/schema/vega-lite/v5.16.3.json", "datasets": {"data-ca19585764b62007b0a833a571a39be5": [{"name": "contro_index", "score": 0.5719168690682231}, {"name": "emotion_class_vec_fear", "score": 0.004991918341577884}, {"name": "sentiment_class_vec_negative", "score": 0.004720752091603397}, {"name": "emotion_class_vec_sadness", "score": 0.0041145641286854575}, {"name": "sentiment_class_vec_positive", "score": 0.003946021882503486}, {"name": "emotion_class_vec_surprise", "score": 0.0030769017815343415}, {"name": "gilded", "score": 0.00020427983301147382}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>

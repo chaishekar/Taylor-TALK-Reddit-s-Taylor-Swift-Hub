@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    #vis.vega-embed {
+      width: 100%;
+      display: flex;
+    }
+
+    #vis.vega-embed details,
+    #vis.vega-embed details summary {
+      position: relative;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@5.15.1"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "data": {"name": "data-743087704aebb1cc6e538db3ec36db0d"}, "mark": {"type": "bar", "height": 10}, "encoding": {"color": {"field": "variable", "legend": null, "scale": {"range": ["#E6B0AA", "#CD6155", "#E74C3C", "#C0392B", "#922B21"]}, "type": "nominal"}, "tooltip": [{"field": "value", "type": "quantitative"}], "x": {"field": "value", "title": "Missing Values", "type": "quantitative"}, "y": {"field": "variable", "title": "Variable", "type": "nominal"}}, "height": {"step": 30}, "params": [{"name": "param_3", "select": {"type": "interval", "encodings": ["x", "y"]}, "bind": "scales"}], "title": {"text": ["Missing Values in Reddit Data"], "subtitle": ["Subreddit: TaylorSwift"]}, "$schema": "https://vega.github.io/schema/vega-lite/v5.15.1.json", "datasets": {"data-743087704aebb1cc6e538db3ec36db0d": [{"variable": "author_cakeday", "value": 1968363, "total_value": 1974887, "percent_null": 100.0}, {"variable": "distinguished", "value": 1925794, "total_value": 1974887, "percent_null": 98.0}, {"variable": "author_flair_css_class", "value": 1225555, "total_value": 1974887, "percent_null": 62.0}, {"variable": "author_flair_text", "value": 1155536, "total_value": 1974887, "percent_null": 59.0}, {"variable": "retrieved_on", "value": 237757, "total_value": 1974887, "percent_null": 12.0}, {"variable": "body", "value": 0, "total_value": 1974887, "percent_null": 0.0}, {"variable": "author", "value": 0, "total_value": 1974887, "percent_null": 0.0}, {"variable": "controversiality", "value": 0, "total_value": 1974887, "percent_null": 0.0}, {"variable": "can_gild", "value": 0, "total_value": 1974887, "percent_null": 0.0}, {"variable": "edited", "value": 0, "total_value": 1974887, "percent_null": 0.0}, {"variable": "gilded", "value": 0, "total_value": 1974887, "percent_null": 0.0}, {"variable": "id", "value": 0, "total_value": 1974887, "percent_null": 0.0}, {"variable": "created_utc", "value": 0, "total_value": 1974887, "percent_null": 0.0}, {"variable": "is_submitter", "value": 0, "total_value": 1974887, "percent_null": 0.0}, {"variable": "link_id", "value": 0, "total_value": 1974887, "percent_null": 0.0}, {"variable": "parent_id", "value": 0, "total_value": 1974887, "percent_null": 0.0}, {"variable": "permalink", "value": 0, "total_value": 1974887, "percent_null": 0.0}, {"variable": "score", "value": 0, "total_value": 1974887, "percent_null": 0.0}, {"variable": "stickied", "value": 0, "total_value": 1974887, "percent_null": 0.0}, {"variable": "subreddit", "value": 0, "total_value": 1974887, "percent_null": 0.0}, {"variable": "subreddit_id", "value": 0, "total_value": 1974887, "percent_null": 0.0}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>

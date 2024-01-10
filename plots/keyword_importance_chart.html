@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    #vis.vega-embed {
+      width: 100%;
+      display: flex;
+    }
+
+    #vis.vega-embed details,
+    #vis.vega-embed details summary {
+      position: relative;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@5.15.1"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "data": {"name": "data-ba5338924c97bd3f3e9ad78747eb5b88"}, "mark": {"type": "bar"}, "encoding": {"color": {"value": "#E55451"}, "tooltip": [{"field": "keyword", "type": "nominal"}, {"field": "max_tfidf_score", "type": "quantitative"}, {"field": "word_count", "type": "quantitative"}], "x": {"axis": {"title": "Word Count"}, "field": "word_count", "type": "quantitative"}, "y": {"axis": {"title": "Keywords"}, "field": "keyword", "sort": "-x", "type": "nominal"}}, "height": 400, "title": "Top 20 Keyword Importance Count with TF-IDF Score", "width": 600, "$schema": "https://vega.github.io/schema/vega-lite/v5.15.1.json", "datasets": {"data-ba5338924c97bd3f3e9ad78747eb5b88": [{"keyword": "often", "max_tfidf_score": 48.99355893058666, "word_count": 62}, {"keyword": "nominationawards", "max_tfidf_score": 48.99355893058666, "word_count": 1}, {"keyword": "taylor", "max_tfidf_score": 48.99355893058666, "word_count": 2587}, {"keyword": "make", "max_tfidf_score": 48.99355893058666, "word_count": 1689}, {"keyword": "social", "max_tfidf_score": 48.99355893058666, "word_count": 75}, {"keyword": "fault", "max_tfidf_score": 48.99355893058666, "word_count": 23}, {"keyword": "aware", "max_tfidf_score": 48.99355893058666, "word_count": 35}, {"keyword": "fan", "max_tfidf_score": 48.99355893058666, "word_count": 765}, {"keyword": "continue", "max_tfidf_score": 48.99355893058666, "word_count": 56}, {"keyword": "okay", "max_tfidf_score": 48.99355893058666, "word_count": 160}, {"keyword": "listen", "max_tfidf_score": 48.99355893058666, "word_count": 810}, {"keyword": "want", "max_tfidf_score": 48.99355893058666, "word_count": 981}, {"keyword": "doesnt", "max_tfidf_score": 48.99355893058666, "word_count": 548}, {"keyword": "okay", "max_tfidf_score": 48.99355893058666, "word_count": 160}, {"keyword": "follow", "max_tfidf_score": 48.99355893058666, "word_count": 108}, {"keyword": "artist", "max_tfidf_score": 48.99355893058666, "word_count": 288}, {"keyword": "uphold", "max_tfidf_score": 48.99355893058666, "word_count": 1}, {"keyword": "standard", "max_tfidf_score": 48.99355893058666, "word_count": 36}, {"keyword": "ideal", "max_tfidf_score": 48.99355893058666, "word_count": 8}, {"keyword": "classic", "max_tfidf_score": 48.99355893058666, "word_count": 28}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>
